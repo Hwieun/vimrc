@@ -28,6 +28,12 @@ nmap <F9> :NERDTreeToggle ~/IdeaProjects
 nmap <F8> :TagbarToggle
 nmap <F10> :NERDTreeToggle % 
 
+" GoTo code navigation
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
 " Find and Replace
 map <leader>fr :%s///g<left><left> " Find and replace. \fr
 map <leader>frl :s///g<left><left> " Find and replace (current line only) \frl
@@ -73,7 +79,7 @@ set clipboard=unnamedplus " set clipboard to default
 set ignorecase
 filetype plugin on
 set path=~/IdeaProjects/**
-set foldmethod=expr
+set foldmethod=indent
 set foldexpr=nvim_treesitter#foldexpr()
 set nofoldenable                     " Disable folding at startup.
 set foldcolumn=1
