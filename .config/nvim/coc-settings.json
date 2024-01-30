@@ -1,0 +1,24 @@
+{
+	"solargraph.completion": true,
+	"hover.floatConfig": {
+		"highlight": "CocFloating"
+	},
+	"hover.autoHide": false,
+    "java.enabled": true,
+    "java.import.gradle.java.home": "/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home",
+  "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home",
+    "java.import.gradle.enabled": true,
+    "java.import.gradle.version": "7.4",
+    "java.import.gradle.annotationProcessing.enabled": true,
+    "java.import.gradle.wrapper.enabled": true,
+    "java.autobuild.enabled": true,
+    "java.completion.guessMethodArguments": true,
+    "java.jdt.ls.lombokSupport.enabled":true,
+    "java.configuration.runtimes": [
+    	{
+      	"name": "JavaSE-1.8",
+      	"path": "/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home"
+  	}
+    ],
+    "java.jdt.ls.vmargs": "-javaagent:/Users/hwieun/.config/coc/extensions/node_modules/coc-java/lombok/lombok-1.18.30.jar"
+}
