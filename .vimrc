@@ -9,7 +9,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'SirVer/ultisnips'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
   "  Plug 'scrooloose/syntastic'
-"	Plug 'hdiniz/vim-gradle'
+	Plug 'hdiniz/vim-gradle'
 	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "	Plug 'dense-analysis/ale'
 	Plug 'junegunn/fzf.vim'
@@ -94,7 +94,7 @@ let g:UltiSnipsExpandTrigger="<Tab>"
 let g:UltiSnipsJumpForwardTrigger="<Tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetDirectories = ['UltiSnips']
+let g:UltiSnipsSnippetDirectories = ['plugged/ultisnips']
 let NERDTreeShowHidden=1
 let g:tagbar_sort = 0
 
