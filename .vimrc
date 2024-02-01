@@ -47,7 +47,7 @@ nnoremap <C-p> :Files ~/IdeaProjects<CR>
 
 command! -nargs=1 Gr :call SearchInAllFiles(<q-args>) 
 function! SearchInAllFiles(keyword)
-	let current_root = finddir('.git', ';')
+	let current_root = fnamemodify(finddir('.git', expand('%:p:h') . ';'), ':h')
 	let extention = '*'
 	if empty(current_root)
 		let current_root = '~/IdeaProjects'
@@ -56,9 +56,9 @@ function! SearchInAllFiles(keyword)
 		let extention = '*.' . expand('%:e')
 	endif
 	let cleaned_keyword = substitute(a:keyword, "'", "", "g")
-	echo cleaned_keyword
-	echo extention
-	exe 'grep /' . cleaned_keyword . '/ ' . current_root . '/**/' . extention
+	" exe 'grep /' . cleaned_keyword . '/ ' . current_root . '/**/' . extention
+	call fzf#vim#grep('grep /' . cleaned_keyword . '/ ' . current_root . '/**/' . extention)
+
 endfunction
 
 nmap bb *  
